@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class SameWordHowManyTimes {
 
@@ -9,7 +10,7 @@ public class SameWordHowManyTimes {
 
         String modifiedString = givenString.toLowerCase().replaceAll("\\.", "");
         String[] arr = modifiedString.split(" ");
-        Map<String, Integer> map = new HashMap<>();
+        Map<String, Integer> map = new TreeMap<>();
 
         for(String el : arr){
             if(map.containsKey(el)){
