@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.*;
+
 public class FindMaxAndMinNumbersInAnArray {
 
     public static void main(String[] args) {
@@ -8,6 +10,7 @@ public class FindMaxAndMinNumbersInAnArray {
         System.out.println("The largest number in thi array is --> " + findMaxNumber(arr));
         System.out.println("The smallest number in thi array is --> " + findMinNumber(arr));
         System.out.println("The second largest number in thi array is --> " + findSecondMaxNumber(arr));
+        System.out.println("Sorting the array --> " + Arrays.toString(sortTheArray(arr)));
     }
 
     public static int findMaxNumber(int[] arr){
@@ -45,6 +48,13 @@ public class FindMaxAndMinNumbersInAnArray {
             }
         }
         return secondMaxNo;
+    }
+
+    public static int[] sortTheArray (int[] arr){
+
+        Arrays.sort(arr);
+
+        return arr;
     }
 
 }
