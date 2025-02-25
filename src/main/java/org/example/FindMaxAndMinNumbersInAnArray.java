@@ -11,6 +11,7 @@ public class FindMaxAndMinNumbersInAnArray {
         System.out.println("The smallest number in thi array is --> " + findMinNumber(arr));
         System.out.println("The second largest number in thi array is --> " + findSecondMaxNumber(arr));
         System.out.println("Sorting the array --> " + Arrays.toString(sortTheArray(arr)));
+        System.out.println("Sorting the array descending--> " + Arrays.toString(sortTheArrayReverse(arr)));
     }
 
     public static int findMaxNumber(int[] arr){
@@ -57,5 +58,15 @@ public class FindMaxAndMinNumbersInAnArray {
         return arr;
     }
 
+    public static Integer[] sortTheArrayReverse (int[] arr){
+
+        Integer[] iarr = Arrays.stream(arr).boxed().toArray(Integer[]::new);
+        Arrays.sort(iarr, Collections.reverseOrder());
+
+
+
+        return iarr;
+    }
 }
 
+// SELECT a.emp_name, b.office FROM employee_table a, work_table b WHERE a.emp_id = b.emp_id;
